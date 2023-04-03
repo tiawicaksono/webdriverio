@@ -41,6 +41,10 @@ export const config: Options.Testrunner = {
     exclude: [
         // 'path/to/excluded/files'
     ],
+    suites: {
+        retribusi: ['./test/features/retribusi.feature'],
+        api: ['./test/features/E2E_user.feature'],
+    },
     //
     // ============
     // Capabilities
@@ -146,7 +150,17 @@ export const config: Options.Testrunner = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec', ['allure', { outputDir: 'allure-results' }]],
+    reporters: [
+        'spec',
+        [
+            'allure',
+            {
+                outputDir: 'allure-results',
+                disableWebdriverStepsReporting: true,
+                disableWebdriverScreenshotsReporting: true,
+            }
+        ]
+    ],
 
 
     //
