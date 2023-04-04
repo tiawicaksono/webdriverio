@@ -157,7 +157,7 @@ export const config: Options.Testrunner = {
             {
                 outputDir: 'allure-results',
                 disableWebdriverStepsReporting: true,
-                disableWebdriverScreenshotsReporting: true,
+                disableWebdriverScreenshotsReporting: false,
             }
         ]
     ],
@@ -288,8 +288,11 @@ export const config: Options.Testrunner = {
      * @param {number}             result.duration  duration of scenario in milliseconds
      * @param {Object}             context          Cucumber World object
      */
-    // afterStep: function (step, scenario, result, context) {
-    // },
+    afterStep: function (step, scenario, result, context) {
+        if (result.error) {
+            browser.takeScreenshot();
+        }
+    },
     /**
      *
      * Runs after a Cucumber Scenario.
@@ -345,7 +348,7 @@ export const config: Options.Testrunner = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {<Object>} results object containing test results
      */
-    // onComplete: function(exitCode, config, capabilities, results) {
+    // onComplete: function (exitCode, config, capabilities, results) {
     // },
     /**
     * Gets executed when a refresh happens.

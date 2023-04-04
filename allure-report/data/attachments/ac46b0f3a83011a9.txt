@@ -1,0 +1,4 @@
+{
+  "using": "css selector",
+  "value": "#FORM_JENIS_KENDARAAN"
+}
