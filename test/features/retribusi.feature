@@ -1,6 +1,6 @@
-Feature: form page
+Feature: form retribusi page
 
-  Scenario Outline: test chai form
+  Scenario Outline: test retribusi
     Given I am on the retribusi page "http://103.184.181.9/retribusi"
     When I enter no_uji <noUji> and no_kendaraan <noKendaraan> and no_mesin <noMesin> and no_chasis <noChasis> and jbb <jbb>
     And I select jenis_kendaraan <jenisKendaraan>

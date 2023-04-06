@@ -33,9 +33,10 @@ export const config: Options.Testrunner = {
     // will be called from there.
     //
     specs: [
-        // './features/**/login.feature'
         // './test/features/**/retribusi.feature'
-        './test/features/**/E2E_user.feature'
+        // './test/features/**/E2E_user.feature'
+        // './test/features/**/upload_file.feature'
+        './test/features/**/upload_file_hidden_input.feature'
     ],
     // Patterns to exclude.
     exclude: [
@@ -44,6 +45,8 @@ export const config: Options.Testrunner = {
     suites: {
         retribusi: ['./test/features/retribusi.feature'],
         api: ['./test/features/E2E_user.feature'],
+        uploadFile: ['./test/features/upload_file.feature'],
+        uploadFileHiddenInput: ['./test/features/upload_file_hidden_input.feature'],
     },
     //
     // ============
