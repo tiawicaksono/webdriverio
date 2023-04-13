@@ -13,7 +13,8 @@
     "api": "wdio run ./wdio.conf.ts --suite api",
     "uploadFile": "wdio run ./wdio.conf.ts --suite uploadFile",
     "uploadFileHiddenInput": "wdio run ./wdio.conf.ts --suite uploadFileHiddenInput",
-    "report": "allure generate allure-result --clean && allure open"
+    "report": "allure generate allure-result --clean && allure open",
+    "show-allure": "allure server allure-result"
   },
   "keywords": [],
   "author": "",
