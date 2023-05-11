@@ -36,7 +36,7 @@ export const config: Options.Testrunner = {
         // './test/features/**/retribusi.feature'
         // './test/features/**/E2E_user.feature'
         // './test/features/**/upload_file.feature'
-        './test/features/**/upload_file_hidden_input.feature'
+        // './test/features/**/upload_file_hidden_input.feature'
     ],
     // Patterns to exclude.
     exclude: [
